@@ -3,7 +3,7 @@
         A PowerShell script to set up a Windows environment by installing packages based on system hardware and user preferences.
 
     .DESCRIPTION
-        This script detects the CPU and GPU of the system and installs relevant tools. It also prompts the user to install additional packages from JSON configuration files.
+        This script detects the CPU and GPU of the system and installs relevant tools. It also prompts the user to install additional packages from YAML configuration files.
 #>
 
 Import-Module powershell-yaml
