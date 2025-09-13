@@ -1,0 +1,67 @@
+# Installs packages useful for development work. This includes IDEs, runtimes,
+# libraries, etc.
+
+packages:
+    # Should come standard starting with Windows 11. However,
+    # we include it here to be sure.
+    - id: Microsoft.WindowsTerminal
+      source: winget
+      scope: user
+      mode: id
+
+    - id: Microsoft.VisualStudioCode
+      source: winget
+      scope: user
+      mode: id
+
+    - id: Python.Python
+      source: winget
+      scope: user
+      mode: id
+
+    # Install JetBrains dotPeek, a free .NET decompiler and assembly browser.
+    # useful for modding and reverse engineering.
+    - id: JetBrains.dotPeek
+      source: winget
+      scope: user
+      mode: id
+
+    # Git for Windows, which includes Git Bash and Git GUI.
+    - id: Git.Git
+      source: winget
+      scope: user
+      mode: id
+
+    # Install the Unity Hub, which is used to manage Unity installations.
+    # The actual Unity Editor versions should be installed via the Hub.
+    - id: Unity.UnityHub
+      source: winget
+      scope: user
+      mode: id
+
+    # Install Visual Studio 2022 Enterprise Edition if we are setting up a 
+    # workplace machine. This requires a license. Otherwise, we install the 
+    # Community Edition.
+    - id: Microsoft.VisualStudio.2022.Enterprise
+      condition: $false #TODO: detect workplace machine
+      source: winget
+      scope: user
+      mode: id
+
+    - id: Microsoft.VisualStudio.2022.Community
+      source: winget
+      scope: user
+      mode: id
+
+    # Microsoft DotNET SDKs. We should install the latest two major versions.
+    # As of September 2025, these are .NET 8 and .NET 9.
+    # See https://dotnet.microsoft.com/en-us/download/dotnet for the latest versions
+    - id: Microsoft.DotNet.SDK.8
+      source: winget
+      scope: user
+      mode: id
+
+    - id: Microsoft.DotNet.SDK.9
+      source: winget
+      scope: user
+      mode: id

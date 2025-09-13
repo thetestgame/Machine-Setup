@@ -1,0 +1,6 @@
+packages:
+    #
+    - id: Nvidia.GeForceExperience
+      source: winget
+      scope: user
+      mode: id

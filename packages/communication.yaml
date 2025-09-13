@@ -1,0 +1,19 @@
+packages:
+  #
+  - id: Microsoft.Teams
+    source: winget
+    scope: user
+    mode: id
+
+  #
+  - id: Discord.Discord
+    source: winget
+    scope: user
+    mode: id
+
+  #
+  - id: Telegram.TelegramDesktop
+    source: winget
+    scope: user
+    mode: id
+  

@@ -1,0 +1,20 @@
+#
+
+packages:
+    #
+    - id: Valve.Steam
+      source: winget
+      scope: machine
+      mode: id
+
+    #
+    - id: GOG.Galaxy
+      source: winget
+      scope: machine
+      mode: id
+
+    # 
+    - id: EpicGames.EpicGamesLauncher
+      source: winget
+      scope: machine
+      mode: id

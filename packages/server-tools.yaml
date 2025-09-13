@@ -1,0 +1,5 @@
+packages:
+    - id: RoyalApps.RoyalTS.7
+      source: winget
+      scope: user
+      mode: id

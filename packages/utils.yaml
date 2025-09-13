@@ -1,0 +1,15 @@
+packages:
+    - id: Spotify.Spotify
+      source: winget
+      scope: user
+      mode: id
+
+    - id: Google.Chrome
+      source: winget
+      scope: machine
+      mode: id
+
+    - id: MartiCliment.UniGetUI
+      source: winget
+      scope: user
+      mode: id

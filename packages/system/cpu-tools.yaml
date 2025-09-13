@@ -1,0 +1,7 @@
+packages:
+    #
+    - id: Intel.IntelDriverAndSupportAssistant
+      condition: $script:proc -match "Intel"
+      source: winget
+      scope: user
+      mode: id
