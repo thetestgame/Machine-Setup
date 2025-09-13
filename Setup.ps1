@@ -8,16 +8,6 @@
 
 Import-Module powershell-yaml
 
-function Get-SystemInfo {
-    <#
-        .SYNOPSIS
-            Gathers and sets system information such as CPU and GPU details.
-    #>
-    
-    $script:proc = Get-WmiObject -Class Win32_Processor | Select-Object -Property Name
-    $script:gpus = Get-WmiObject -Class Win32_VideoController | Select-Object -Property Description
-}
-
 function Install-PackageYaml([string] $Filename) {
     <#
         .SYNOPSIS
@@ -62,10 +52,10 @@ function Install-PackageYaml([string] $Filename) {
     }
 }
 
-function Install-ConfiguredPackages {
+function Invoke-Main {
     <#
         .SYNOPSIS
-            Prompts the user to install packages from YAML configuration files.
+            Main entry point for the script. 
     #>
 
     $files = Get-ChildItem -Recurse -Filter "*.yaml"
@@ -80,16 +70,6 @@ function Install-ConfiguredPackages {
             }
         }
     }
-}
-
-function Invoke-Main {
-    <#
-        .SYNOPSIS
-            Main entry point for the script. 
-    #>
-
-    Get-SystemInfo
-    Install-ConfiguredPackages
     Write-Host "Setup complete. Please restart your system to apply all changes."
 }
 

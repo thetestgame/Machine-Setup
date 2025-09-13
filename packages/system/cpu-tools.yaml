@@ -1,7 +1,13 @@
+# Installs CPU-related tools based on the detected CPU type.
+# Currently, only Intel CPUs are supported.
+
 packages:
-    #
+    # If the machine has an Intel CPU, install the Intel Driver & Support Assistant
+    # https://www.intel.com/content/www/us/en/support/detect.html
     - id: Intel.IntelDriverAndSupportAssistant
-      condition: $script:proc -match "Intel"
+      condition: |
+        $proc = Get-WmiObject -Class Win32_Processor | Select-Object -Property Name
+        $proc -match "Intel"
       source: winget
-      scope: user
+      scope: machine
       mode: id
