@@ -1,5 +1,8 @@
 packages:
-    #
+    # If the machine has an NVIDIA GPU, install GeForce Experience
+    # https://www.nvidia.com/en-us/geforce/geforce-experience/
+
+    # TODO: auto detect using "gpus = Get-WmiObject -Class Win32_VideoController | Select-Object -Property Description"
     - id: Nvidia.GeForceExperience
       source: winget
       scope: user
